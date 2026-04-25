@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ExploreAsia360 | Curated Asian Travel Experiences</title>
+  <meta
+    name="description"
+    content="ExploreAsia360 creates personalized itineraries across Asia and the UAE with tailor-made planning, transparent consultation, and end-to-end travel support."
+  >
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#trip-form">Skip to inquiry form</a>
+
+  <header class="site-header" id="top">
+    <div class="container nav-shell">
+      <a class="brand" href="#top" aria-label="ExploreAsia360 home">
+        <span class="brand-mark">EA</span>
+        <span>
+          <strong>ExploreAsia360</strong>
+          <small>A Platform by Pioneer Travel &amp; Business Consultancy</small>
+        </span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#destinations">Destinations</a>
+        <a href="#process">How It Works</a>
+        <a href="#trip-form">Plan Your Trip</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="button button-secondary" href="https://api.whatsapp.com/send?text=Hello%20ExploreAsia360%2C%20I%27d%20like%20help%20planning%20my%20trip." target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero-section">
+      <div class="hero-overlay"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Customized travel planning across Asia and the UAE</p>
+          <h1>Curated Asian Travel Experiences &ndash; Crafted Around You</h1>
+          <p class="hero-text">
+            Customized, end-to-end travel planning across Asia and the UAE based on your preferences, budget, and travel style.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#trip-form">Plan My Trip</a>
+            <a class="button button-ghost" href="https://api.whatsapp.com/send?text=Hello%20ExploreAsia360%2C%20I%27d%20like%20help%20planning%20my%20trip." target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+          </div>
+
+          <ul class="hero-metrics" aria-label="Highlights">
+            <li>
+              <strong>100%</strong>
+              <span>Tailor-made itineraries</span>
+            </li>
+            <li>
+              <strong>8+</strong>
+              <span>Core destinations covered</span>
+            </li>
+            <li>
+              <strong>End-to-end</strong>
+              <span>Support before, during, and after travel</span>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="hero-panel" aria-label="Travel planning highlights">
+          <div class="panel-card">
+            <p class="panel-label">Signature planning style</p>
+            <h2>Luxury inspiration. Flexible execution. No rigid packages.</h2>
+            <p>
+              We design around your travel goals instead of pushing fixed tours, so every route, stay, and experience feels intentional.
+            </p>
+            <div class="panel-points">
+              <span>Private escapes</span>
+              <span>Family journeys</span>
+              <span>Business travel</span>
+              <span>Multi-city itineraries</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="quick-planner-wrap">
+      <div class="container">
+        <div class="quick-planner">
+          <div class="planner-topline">
+            <div>
+              <p class="eyebrow">Quick planner</p>
+              <h2>Start with your destination shortlist</h2>
+            </div>
+            <p class="planner-note">Choose a destination, set your basics, and we'll carry it into your personalized inquiry.</p>
+          </div>
+
+          <div class="destination-chips" role="tablist" aria-label="Popular destinations">
+            <button class="chip is-active" type="button" data-destination="Malaysia">Malaysia</button>
+            <button class="chip" type="button" data-destination="Thailand">Thailand</button>
+            <button class="chip" type="button" data-destination="Singapore">Singapore</button>
+            <button class="chip" type="button" data-destination="Bali">Bali</button>
+            <button class="chip" type="button" data-destination="Vietnam">Vietnam</button>
+            <button class="chip" type="button" data-destination="Philippines">Philippines</button>
+            <button class="chip" type="button" data-destination="Dubai">Dubai</button>
+            <button class="chip" type="button" data-destination="Abu Dhabi">Abu Dhabi</button>
+          </div>
+
+          <form class="quick-form" id="quick-form">
+            <label>
+              <span>Destination</span>
+              <select id="quick-destination" name="destination">
+                <option>Malaysia</option>
+                <option>Thailand</option>
+                <option>Singapore</option>
+                <option>Bali</option>
+                <option>Vietnam</option>
+                <option>Philippines</option>
+                <option>Dubai</option>
+                <option>Abu Dhabi</option>
+              </select>
+            </label>
+
+            <label>
+              <span>Departure City</span>
+              <input id="quick-city" name="departure-city" type="text" placeholder="Dhaka, Kuala Lumpur, Dubai">
+            </label>
+
+            <label>
+              <span>Travel Date</span>
+              <input id="quick-date" name="travel-date" type="date">
+            </label>
+
+            <label>
+              <span>Days/Nights</span>
+              <input id="quick-duration" name="days-nights" type="text" placeholder="5D / 4N">
+            </label>
+
+            <label>
+              <span>Travellers</span>
+              <input id="quick-travellers" name="travellers" type="text" placeholder="2 Adults, 1 Child">
+            </label>
+
+            <label>
+              <span>Budget Range</span>
+              <select id="quick-budget" name="budget">
+                <option value="">Select range</option>
+                <option>Value Explorer</option>
+                <option>Balanced Comfort</option>
+                <option>Premium Escape</option>
+                <option>Luxury Signature</option>
+              </select>
+            </label>
+
+            <button class="button button-primary planner-submit" type="submit">Plan My Trip</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container split-layout">
+        <div>
+          <p class="eyebrow">Welcome to ExploreAsia360</p>
+          <h2>Requirement-based travel planning for Asia and the UAE</h2>
+          <p class="section-text">
+            ExploreAsia360 is a specialized travel platform operated under Pioneer Travel &amp; Business Consultancy, created to deliver customized, end-to-end travel planning across Asia and the UAE.
+          </p>
+          <p class="section-text">
+            Rather than offering pre-fixed packages, we focus on understanding your exact travel needs and crafting personalized itineraries tailored to your preferences, budget, and travel style.
+          </p>
+        </div>
+
+        <div class="info-card">
+          <p class="eyebrow">About Us</p>
+          <p>
+            ExploreAsia360 is a travel-focused digital platform and brand initiative of Pioneer Travel &amp; Business Consultancy, a firm engaged in travel planning, business advisory, and bespoke service solutions.
+          </p>
+          <p>
+            Through this platform, we bring deep regional expertise and trusted partnerships across Asia to curate seamless travel experiences for individuals, families, and corporate clients.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section destinations-section" id="destinations">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Our Specialization</p>
+          <h2>Destinations we curate with flexibility and precision</h2>
+          <p class="section-text">
+            From luxury escapes to budget-friendly holidays, business travel to leisure getaways, every journey is tailor-made rather than pre-defined.
+          </p>
+        </div>
+
+        <div class="destination-grid">
+          <article class="destination-card">
+            <span>Malaysia</span>
+            <p>Urban culture, island relaxation, and easy multi-stop journeys.</p>
+          </article>
+          <article class="destination-card">
+            <span>Thailand</span>
+            <p>Beach breaks, wellness retreats, nightlife, and family travel.</p>
+          </article>
+          <article class="destination-card">
+            <span>Singapore</span>
+            <p>Premium city stays, business trips, and short luxury escapes.</p>
+          </article>
+          <article class="destination-card">
+            <span>Indonesia</span>
+            <p>Bali and beyond, from serene villas to experience-rich island routes.</p>
+          </article>
+          <article class="destination-card">
+            <span>Vietnam</span>
+            <p>Culture, cuisine, nature, and beautifully paced multi-city itineraries.</p>
+          </article>
+          <article class="destination-card">
+            <span>Philippines</span>
+            <p>Tropical island adventures with curated stays and smooth logistics.</p>
+          </article>
+          <article class="destination-card">
+            <span>Dubai</span>
+            <p>Luxury shopping, iconic landmarks, family attractions, and stopovers.</p>
+          </article>
+          <article class="destination-card">
+            <span>Abu Dhabi</span>
+            <p>Elegant city breaks, events travel, and culturally rich experiences.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section value-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Why Choose ExploreAsia360</p>
+          <h2>A polished planning experience built around your preferences</h2>
+        </div>
+
+        <div class="value-grid">
+          <article class="value-card">
+            <h3>100% Tailor-Made Itineraries</h3>
+            <p>Every trip is built from your requirements, not pulled from a pre-loaded package bank.</p>
+          </article>
+          <article class="value-card">
+            <h3>No Fixed Packages</h3>
+            <p>Enjoy fully flexible planning that adapts to your pace, priorities, and budget range.</p>
+          </article>
+          <article class="value-card">
+            <h3>Expert Destination Knowledge</h3>
+            <p>Regional expertise helps us shape better routing, better stays, and better value.</p>
+          </article>
+          <article class="value-card">
+            <h3>End-to-End Travel Assistance</h3>
+            <p>We support flights, stays, visa guidance, transfers, and itinerary refinement.</p>
+          </article>
+          <article class="value-card">
+            <h3>Transparent Pricing</h3>
+            <p>Consultation-led planning means more clarity around what fits your expectations.</p>
+          </article>
+          <article class="value-card">
+            <h3>Personalized Support</h3>
+            <p>Support continues before, during, and after travel for a smoother experience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section process-section" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">How It Works</p>
+          <h2>Five simple steps from inquiry to execution</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-step">
+            <strong>01</strong>
+            <h3>Submit your travel requirements</h3>
+            <p>Tell us where you want to go, how you want to travel, and what matters most.</p>
+          </article>
+          <article class="timeline-step">
+            <strong>02</strong>
+            <h3>We review your preferences</h3>
+            <p>Our team studies your budget, travel style, timing, and trip purpose.</p>
+          </article>
+          <article class="timeline-step">
+            <strong>03</strong>
+            <h3>We prepare a personalized itinerary</h3>
+            <p>Routing, stays, experiences, and support services are shaped around your goals.</p>
+          </article>
+          <article class="timeline-step">
+            <strong>04</strong>
+            <h3>You review and refine</h3>
+            <p>We adjust the proposal together until the pace and inclusions feel right.</p>
+          </article>
+          <article class="timeline-step">
+            <strong>05</strong>
+            <h3>We handle bookings and execution</h3>
+            <p>Once confirmed, we coordinate the details for a smooth travel experience.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach-section">
+      <div class="container approach-card">
+        <div>
+          <p class="eyebrow">Our Approach</p>
+          <h2>Intelligent planning instead of generic packages</h2>
+        </div>
+        <div class="approach-points">
+          <span>Optimal routing</span>
+          <span>Best value for money</span>
+          <span>Comfortable stays</span>
+          <span>Memorable experiences</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section form-section" id="trip-form">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Plan Your Trip</p>
+          <h2>Tell us your requirements and we will craft the itinerary</h2>
+          <p class="section-text">
+            We do not believe in one-size-fits-all travel. Share your requirements and our team will build a tailored itinerary around them.
+          </p>
+        </div>
+
+        <form class="trip-form" id="travel-inquiry-form">
+          <div class="form-block">
+            <h3>Personal Details</h3>
+            <div class="form-grid">
+              <label>
+                <span>Full Name</span>
+                <input name="full-name" type="text" placeholder="Your full name" required>
+              </label>
+              <label>
+                <span>Mobile Number</span>
+                <input name="mobile-number" type="tel" placeholder="+880 1XXXXXXXXX" required>
+              </label>
+              <label>
+                <span>Email Address</span>
+                <input name="email-address" type="email" placeholder="you@example.com" required>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <h3>Travel Details</h3>
+            <div class="form-grid">
+              <label>
+                <span>Preferred Destination(s)</span>
+                <select id="main-destination" name="preferred-destination" required>
+                  <option value="">Select destination</option>
+                  <option>Malaysia</option>
+                  <option>Thailand</option>
+                  <option>Singapore</option>
+                  <option>Bali</option>
+                  <option>Vietnam</option>
+                  <option>Philippines</option>
+                  <option>Dubai</option>
+                  <option>Abu Dhabi</option>
+                </select>
+              </label>
+              <label>
+                <span>Departure City</span>
+                <input id="main-city" name="departure-city" type="text" placeholder="Your departure city" required>
+              </label>
+              <label>
+                <span>Intended Travel Date</span>
+                <input id="main-date" name="travel-date" type="date" required>
+              </label>
+              <label>
+                <span>Number of Days / Nights</span>
+                <input id="main-duration" name="days-nights" type="text" placeholder="Example: 6D / 5N" required>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <h3>Traveller Information</h3>
+            <div class="form-grid">
+              <label>
+                <span>Number of Adults</span>
+                <input id="main-adults" name="number-of-adults" type="number" min="1" value="2" required>
+              </label>
+              <label>
+                <span>Number of Children</span>
+                <input id="main-children" name="number-of-children" type="number" min="0" value="0">
+              </label>
+              <label class="form-span-2">
+                <span>Ages of Children</span>
+                <input id="main-child-ages" name="ages-of-children" type="text" placeholder="Example: 4, 8">
+              </label>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <h3>Stay Preferences</h3>
+            <div class="form-grid">
+              <label>
+                <span>Type of Hotel</span>
+                <select name="hotel-type">
+                  <option value="">Select stay type</option>
+                  <option>3 Star</option>
+                  <option>4 Star</option>
+                  <option>5 Star</option>
+                  <option>Luxury Villas</option>
+                  <option>Resorts</option>
+                </select>
+              </label>
+              <label>
+                <span>Room Preference</span>
+                <select name="room-preference">
+                  <option value="">Select room type</option>
+                  <option>Single</option>
+                  <option>Double</option>
+                  <option>Family</option>
+                </select>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <h3>Travel Preferences</h3>
+            <div class="form-grid">
+              <label>
+                <span>Purpose of Travel</span>
+                <select name="travel-purpose">
+                  <option value="">Select purpose</option>
+                  <option>Leisure</option>
+                  <option>Honeymoon</option>
+                  <option>Business</option>
+                  <option>Group</option>
+                  <option>Family</option>
+                </select>
+              </label>
+              <label>
+                <span>Budget Range</span>
+                <select id="main-budget" name="budget-range" required>
+                  <option value="">Select budget range</option>
+                  <option>Value Explorer</option>
+                  <option>Balanced Comfort</option>
+                  <option>Premium Escape</option>
+                  <option>Luxury Signature</option>
+                </select>
+              </label>
+              <label class="form-span-2">
+                <span>Preferred Activities</span>
+                <div class="checkbox-grid">
+                  <label><input type="checkbox" name="activities" value="Adventure"> Adventure</label>
+                  <label><input type="checkbox" name="activities" value="Relaxation"> Relaxation</label>
+                  <label><input type="checkbox" name="activities" value="Sightseeing"> Sightseeing</label>
+                  <label><input type="checkbox" name="activities" value="Shopping"> Shopping</label>
+                  <label><input type="checkbox" name="activities" value="Nightlife"> Nightlife</label>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-block">
+            <h3>Additional Requirements</h3>
+            <div class="form-grid">
+              <label>
+                <span>Flight Booking Required</span>
+                <select name="flight-booking-required">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </label>
+              <label>
+                <span>Visa Assistance Required</span>
+                <select name="visa-assistance-required">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </label>
+              <label>
+                <span>Airport Transfers Required</span>
+                <select name="airport-transfers-required">
+                  <option>Yes</option>
+                  <option>No</option>
+                </select>
+              </label>
+              <label class="form-span-3">
+                <span>Special Requests / Notes</span>
+                <textarea name="special-requests" rows="5" placeholder="Tell us about must-see places, pace preferences, celebrations, dietary needs, or anything else important."></textarea>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-footer">
+            <p id="form-feedback" aria-live="polite"></p>
+            <button class="button button-primary" type="submit">Plan My Trip</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container contact-grid">
+        <div>
+          <p class="eyebrow">Contact Us</p>
+          <h2>ExploreAsia360</h2>
+          <p class="section-text">A Platform by Pioneer Travel &amp; Business Consultancy</p>
+        </div>
+
+        <div class="contact-card">
+          <a href="tel:+00000000000">Phone: [Your Number]</a>
+          <a href="mailto:hello@exploreasia360.com">Email: [Your Email]</a>
+          <a href="https://www.exploreasia360.com" target="_blank" rel="noreferrer">Website: www.exploreasia360.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>
+        ExploreAsia360 is a travel facilitation platform operated under Pioneer Travel &amp; Business Consultancy. All travel services, bookings, and arrangements are subject to availability, partner terms, and applicable regulations.
+      </p>
+      <a href="#top">Back to top</a>
+    </div>
+  </footer>
+
+  <a
+    class="sticky-whatsapp"
+    href="https://api.whatsapp.com/send?text=Hello%20ExploreAsia360%2C%20I%27d%20like%20help%20planning%20my%20trip."
+    target="_blank"
+    rel="noreferrer"
+    aria-label="Chat with ExploreAsia360 on WhatsApp"
+  >
+    <span>WhatsApp</span>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+</html>
