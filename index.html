@@ -44,7 +44,7 @@
       </nav>
 
       <div class="nav-actions">
-        <a class="button button-secondary" href="https://api.whatsapp.com/send?text=Hello%20ExploreAsia360%2C%20I%27d%20like%20help%20planning%20my%20trip." target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+        <a class="button button-secondary" href="https://wa.me/8801788155379?text=Hello%20ExploreAsia360%2C%20I%27d%20like%20help%20planning%20my%20trip." target="_blank" rel="noreferrer">Chat on WhatsApp</a>
       </div>
     </div>
   </header>
@@ -62,7 +62,7 @@
 
           <div class="hero-actions">
             <a class="button button-primary" href="#trip-form">Plan My Trip</a>
-            <a class="button button-ghost" href="https://api.whatsapp.com/send?text=Hello%20ExploreAsia360%2C%20I%27d%20like%20help%20planning%20my%20trip." target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+            <a class="button button-ghost" href="https://wa.me/8801788155379?text=Hello%20ExploreAsia360%2C%20I%27d%20like%20help%20planning%20my%20trip." target="_blank" rel="noreferrer">Chat on WhatsApp</a>
           </div>
 
           <ul class="hero-metrics" aria-label="Highlights">
@@ -148,12 +148,12 @@
 
             <label>
               <span>Days/Nights</span>
-              <input id="quick-duration" name="days-nights" type="text" placeholder="5D / 4N">
+                <input id="quick-duration" name="days-nights" type="text" placeholder="5 Days / 4 Nights">
             </label>
 
             <label>
               <span>Travellers</span>
-              <input id="quick-travellers" name="travellers" type="text" placeholder="2 Adults, 1 Child">
+                <input id="quick-travellers" name="travellers" type="text" placeholder="2 Adults, 1 Child">
             </label>
 
             <label>
@@ -169,6 +169,43 @@
 
             <button class="button button-primary planner-submit" type="submit">Plan My Trip</button>
           </form>
+
+          <div class="preview-card planner-preview" aria-live="polite">
+            <div class="preview-header">
+              <div>
+                <p class="eyebrow">Quick Preview</p>
+                <h3>What will be sent to WhatsApp</h3>
+              </div>
+              <p class="preview-note">Your selected trip details update live here before we open WhatsApp.</p>
+            </div>
+
+            <div class="preview-grid">
+              <article class="preview-item">
+                <span class="preview-label">Destination</span>
+                <strong class="preview-value" id="quick-preview-destination">Malaysia</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Departure City</span>
+                <strong class="preview-value" id="quick-preview-city">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Travel Date</span>
+                <strong class="preview-value" id="quick-preview-date">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Days / Nights</span>
+                <strong class="preview-value" id="quick-preview-duration">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Travellers</span>
+                <strong class="preview-value" id="quick-preview-travellers">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Budget Range</span>
+                <strong class="preview-value" id="quick-preview-budget">Not provided</strong>
+              </article>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -506,6 +543,79 @@
             </div>
           </div>
 
+          <div class="preview-card form-preview" aria-live="polite">
+            <div class="preview-header">
+              <div>
+                <p class="eyebrow">Trip Preview</p>
+                <h3>Your WhatsApp request summary</h3>
+              </div>
+              <p class="preview-note">As the customer fills the form, this summary updates and gets sent when they tap Plan My Trip.</p>
+            </div>
+
+            <div class="preview-grid preview-grid-detailed">
+              <article class="preview-item">
+                <span class="preview-label">Full Name</span>
+                <strong class="preview-value" id="main-preview-name">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Mobile Number</span>
+                <strong class="preview-value" id="main-preview-mobile">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Email Address</span>
+                <strong class="preview-value" id="main-preview-email">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Destination</span>
+                <strong class="preview-value" id="main-preview-destination">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Departure City</span>
+                <strong class="preview-value" id="main-preview-city">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Travel Date</span>
+                <strong class="preview-value" id="main-preview-date">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Days / Nights</span>
+                <strong class="preview-value" id="main-preview-duration">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Travellers</span>
+                <strong class="preview-value" id="main-preview-travellers">2 Adults</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Hotel Preference</span>
+                <strong class="preview-value" id="main-preview-hotel">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Room Preference</span>
+                <strong class="preview-value" id="main-preview-room">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Purpose of Travel</span>
+                <strong class="preview-value" id="main-preview-purpose">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Budget Range</span>
+                <strong class="preview-value" id="main-preview-budget">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Preferred Activities</span>
+                <strong class="preview-value" id="main-preview-activities">Not provided</strong>
+              </article>
+              <article class="preview-item">
+                <span class="preview-label">Support Services</span>
+                <strong class="preview-value" id="main-preview-services">Flight, visa, and transfers details will appear here</strong>
+              </article>
+              <article class="preview-item preview-item-wide">
+                <span class="preview-label">Special Requests</span>
+                <strong class="preview-value" id="main-preview-notes">No special requests added yet</strong>
+              </article>
+            </div>
+          </div>
+
           <div class="form-footer">
             <p id="form-feedback" aria-live="polite"></p>
             <button class="button button-primary" type="submit">Plan My Trip</button>
@@ -523,7 +633,7 @@
         </div>
 
         <div class="contact-card">
-          <a href="tel:+00000000000">Phone: [Your Number]</a>
+          <a href="tel:+8801788155379">Phone: +8801788155379</a>
           <a href="mailto:hello@exploreasia360.com">Email: [Your Email]</a>
           <a href="https://www.exploreasia360.com" target="_blank" rel="noreferrer">Website: www.exploreasia360.com</a>
         </div>
@@ -542,7 +652,7 @@
 
   <a
     class="sticky-whatsapp"
-    href="https://api.whatsapp.com/send?text=Hello%20ExploreAsia360%2C%20I%27d%20like%20help%20planning%20my%20trip."
+    href="https://wa.me/8801788155379?text=Hello%20ExploreAsia360%2C%20I%27d%20like%20help%20planning%20my%20trip."
     target="_blank"
     rel="noreferrer"
     aria-label="Chat with ExploreAsia360 on WhatsApp"
